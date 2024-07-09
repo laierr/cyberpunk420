@@ -17,3 +17,22 @@ helm upgrade --install flask-service .\helm\charts\flask-service\ --namespace cy
 ``` bash 
 curl -Lw http://localhost:5000
 ```
+
+## Local Development 
+
+- Install requiremnets
+```bash 
+pip install -r .\requiremets.txt
+```
+
+- Run tests 
+``` bash 
+python -m unittest test_app.py
+```
+
+## TODO 
+
+* add ETCd
+* when they reach consensus leader deliver a message: we goming to plan a heist [list of participants]
+* when the messege is recieved everyone else send message [yes, let's do that]
+* return message logs as a chatlog as json.

@@ -8,7 +8,7 @@ class ServiceNameTestCase(unittest.TestCase):
         self.app.testing = True
 
     def test_service_name(self):
-        response = self.app.get('/service_name')
+        response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
         data = json.loads(response.get_data(as_text=True))
         self.assertIn('service_name', data)
